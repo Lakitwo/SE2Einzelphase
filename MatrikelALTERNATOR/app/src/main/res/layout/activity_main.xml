@@ -6,13 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/etMNr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:ems="10"
+        android:hint="@string/matrikelnummer"
+        android:inputType="text|number"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.301"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tvMNR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gib_deine_matrikelnummer_ein"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etMNr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
+
+    <Button
+        android:id="@+id/btnAbschicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/abschicken"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMNr" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
