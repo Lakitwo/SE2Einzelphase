@@ -3,6 +3,7 @@ package com.example.matrikelalternator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,5 +23,10 @@ public class MainActivity extends AppCompatActivity {
         Matrikelnummer = findViewById(R.id.etMNr);
         EnterMNr = findViewById(R.id.tvMNR);
         Abschicken = findViewById(R.id.btnAbschicken);
+    }
+
+    public void send(View view){
+        MatrikelnummerSender ms = new MatrikelnummerSender();
+        ms.execute(Matrikelnummer.getText().toString());
     }
 }
