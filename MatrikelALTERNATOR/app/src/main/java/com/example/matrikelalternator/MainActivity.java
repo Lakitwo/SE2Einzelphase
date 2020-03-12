@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText Matrikelnummer;
     private TextView EnterMNr;
+    private TextView ServerAntwort;
     private Button Abschicken;
 
     @Override
@@ -23,10 +24,12 @@ public class MainActivity extends AppCompatActivity {
         Matrikelnummer = findViewById(R.id.etMNr);
         EnterMNr = findViewById(R.id.tvMNR);
         Abschicken = findViewById(R.id.btnAbschicken);
+        ServerAntwort = findViewById(R.id.servResp);
     }
 
     public void send(View view){
-        MatrikelnummerSender ms = new MatrikelnummerSender();
+        MatrikelnummerSender ms = new MatrikelnummerSender(Matrikelnummer.getText().toString());
         ms.execute(Matrikelnummer.getText().toString());
+        ServerAntwort.setText(ms.getRecievedMessage());
     }
 }
