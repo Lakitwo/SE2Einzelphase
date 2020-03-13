@@ -4,4 +4,8 @@
     <string name="gib_deine_matrikelnummer_ein">Gib deine Matrikelnummer ein</string>
     <string name="abschicken">Abschicken</string>
     <string name="antwort_vom_server">Antwort vom Server</string>
+    <string name="alternate">ALTERNATE</string>
+    <string name="textview">TextView</string>
+    <string name="ergebnis_alternierende_quersumme">Ergebnis alternierende Quersumme</string>
+    <string name="mnr_not_valid">Dies ist keine gueltige Matrikelnummer</string>
 </resources>
