@@ -9,6 +9,12 @@ class CalcAlternate {
         int quersumme = 0;
         int checkIfEven = mnr % 2;
         boolean add = true;
+        int anzChars = m.length();
+
+        //set boolean
+        if(anzChars % 2 == 0){
+            add = false;
+        }
 
 
         while (mnr > 0) {
